@@ -2,22 +2,34 @@
     <head>
         <title> Day 5</title>
     </head>
-
+ 
     <body>
-        <div id="block"></div>
+        <div onclick="handleClick()" id="block" style="border: 1px solid black;"></div>
         <script>
-             var a ='red';
+             
 
-             var colors = ['red','green', 'blue']
+           
+             let element= document.getElementById('block');
+             element.style.width= "105px";
+             element.style.height= "100px";
+             element.style.background= 'blue';
+             
 
-             console.log(colors[0],colors[1])
-             console.log(colors)
 
-             var element= document.getElementById('block');
-             element.style.width= "100px";
-             element.style.height= "100vh";
-             element.style.background= 'red';
+            function handleClick()
+            {
+             let colors1 =['red', 'green', 'blue','yellow'];
+             let randomcolor=colors1[Math.floor(Math.random()* colors1.length)];
+             //  console.log(randomcolor)
 
+             
+             /*function handleClick()
+             {
+                alert('Clicked!!!')c
+             }*/
+             //  element.style.background= randomcolor;
+
+            }
         </script>
 
 
