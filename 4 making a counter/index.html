@@ -1,0 +1,35 @@
+<html>
+    <head>
+        <title> my counter </title>
+    </head>
+    <body>
+        <div id="counter">0</div>
+        <button onclick="calculate(1)">add</button>
+        <button onClick="calculate(0)">subtract</button>
+        <script>
+            
+            function calculate(num){
+                
+                let counterelement= document.getElementById('counter');
+                let draw= counterelement.textContent;
+                let number=parseInt(draw)
+
+                if (num==1)
+                {
+                
+                number= number+1;
+                counterelement.textContent=number;
+                }
+                else{
+                number=number-1;
+                counterelement.textContent=number;
+                }
+
+
+                
+
+            }
+
+        </script>
+    </body>
+</html>

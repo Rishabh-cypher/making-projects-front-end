@@ -1,0 +1,80 @@
+<html>
+    <head>
+        <title>mosquito smasher</title>
+        <link rel="stylesheet" href="index.css" /> 
+    </head>
+    <body>
+        <div class="dic" id="block"></div>
+        <p>Kills:<span id="Kills">0</span></p>
+        <audio id= "audio1">
+        <source src="../pictures/smash.mp3" type="audio/mpeg"/></audio>
+        <script>
+            // let count=0;
+            var container= document.getElementById('block');
+            container.style.width = '600px';
+            container.style.height= '600px';
+            container.style.background='#E31616';
+            container.style.cursor= "crosshair";
+            
+
+            var mosquito= document.createElement('img');
+            mosquito.src='../pictures/mos.png';
+            mosquito.style.width='100px';
+            mosquito.style.height='100px';
+            mosquito.addEventListener('click',()=>{OnClicked()})
+            mosquito.addEventListener('click',()=>{
+
+                var myAudio= document.getElementById('audio1');
+                myAudio.play();
+                myAudio.playbackRate=1.75;
+            })
+            container.appendChild(mosquito);
+
+
+
+
+
+            function moveMosquito(a,b){
+                
+                mosquito.style.marginTop = `${a}`
+                mosquito.style.marginLeft = `${b}`
+
+
+            }
+
+            function randomInput(){
+
+                let a = Math.floor(Math.random() * (400));
+                
+                let b = Math.floor(Math.random() * (400));
+
+                moveMosquito(a,b)
+            }
+        
+
+            function callingRandomInputs(){
+                setInterval(()=>{
+                    randomInput()
+
+                },1000)
+            }
+
+            function OnClicked(){
+             
+
+                var kills=document.getElementById('Kills');
+                let number= kills.textContent;
+                let count = parseInt(number);
+                count ++;
+                kills.textContent=`${count}`;
+
+                
+            }
+           
+
+
+            callingRandomInputs()
+
+        </script>
+    </body>
+</html>

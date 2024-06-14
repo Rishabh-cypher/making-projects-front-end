@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <title> Change me</title>
+    </head>
+ 
+    <body>
+        <div onclick= "handleClick()" id="block" style="border: 1px solid black;"></div>
+        <script>
+             
+
+           
+             let element= document.getElementById('block');
+             element.style.width= "105px";
+             element.style.height= "100px";
+           
+             
+
+
+             function handleClick()
+               {
+                 let colors1 =['red', 'green', 'blue','yellow'];
+                 let randomcolor=colors1[Math.floor(Math.random()* colors1.length)];
+                 element.style.background= randomcolor;
+
+               }
+        </script>
+
+
+
+
+
+    </body>
+</html>

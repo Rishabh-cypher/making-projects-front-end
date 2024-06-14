@@ -1,0 +1,20 @@
+#block{
+    border-radius: 30px;
+    display: flex;
+    margin: auto;
+}
+
+p{
+    font-family: sans-serif;
+    font-size: 5ch;
+    font-style: italic;
+    font-weight: 900;
+    color:blue;
+    margin:auto;
+   
+}
+body{
+    background-image: url(../pictures/msoa.jpg);
+    display: flex;
+    flex-direction: column;
+}
