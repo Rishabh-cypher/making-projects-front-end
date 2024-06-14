@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <title>my day 3</title>
+    </head>
+    <body>
+        <div id="bulb-container"></div>
+        <button id ="on" onClick= onOff(1)>on</button>
+        <button id ="off" onClick= onOff(0)>off</button>
+
+        <script>
+
+            var picture= document.getElementById('bulb-container');
+            var imageTag= document.createElement('img');
+            // imageTag.src='../pictures/off.png'
+            // picture.appendChild(imageTag);
+            
+            function onOff(a)
+            {
+
+                if(a==1){
+                    imageTag.src='../pictures/on.png'
+                    picture.appendChild(imageTag);
+
+                }
+                if(a==0){
+                    imageTag.src='../pictures/off.png'
+                    picture.appendChild(imageTag);
+                }
+            }
+
+            
+        </script>
+    </body>
+
+
+</html>
